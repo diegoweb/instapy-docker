@@ -1,4 +1,4 @@
-FROM arm32v7/python:slim-stretch
+FROM arm32v7/debian
 
 RUN [ "cross-build-start" ]
 
