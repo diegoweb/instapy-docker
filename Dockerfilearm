@@ -12,6 +12,7 @@ RUN apt-get update \
       chromedriver
       
 RUN wget -O '/tmp/requirements.txt' https://raw.githubusercontent.com/InstaPy/instapy-docker/master/requirements.txt \
+    && pip install --ignore-installed jsonschema==2.6.0 six \
     && pip install --no-cache-dir -U -r /tmp/requirements.txt
     
 RUN apt-get purge -y --auto-remove \
